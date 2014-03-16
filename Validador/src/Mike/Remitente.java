@@ -4,6 +4,8 @@
  */
 package Mike;
 
+import com.sun.imageio.spi.RAFImageInputStreamSpi;
+
 /**
  *
  * @author PC-Ciudad Deseada
@@ -41,6 +43,11 @@ public class Remitente extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setText("Enviar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -101,6 +108,17 @@ public class Remitente extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      String R,A,C;
+       R= jTextField1.getText();
+      A=jTextField2.getText();
+      C=jTextArea1.getText();
+       Mensaje msj= new Mensaje(R, A, C);
+       
+       
+       
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
